@@ -1,4 +1,4 @@
-json.pokemon do 
+json.set! @pokemon.id do
   json.extract! @pokemon, :id, :name, :attack, :defense
   json.moves do 
     json.array! @pokemon.moves
@@ -8,5 +8,7 @@ json.pokemon do
   json.item_ids do 
     json.array! @pokemon.items.ids
   end
-end
+
+end 
+
 

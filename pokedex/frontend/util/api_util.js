@@ -1,6 +1,6 @@
 export const fetchAllPokemon = () => (
   $.ajax({
-    url: '/api/pokemon',
+    url: 'api/pokemon',
   })
 );
 
@@ -8,9 +8,15 @@ export const fetchAllPokemon = () => (
 export const createPokemon = pokemon => (
   $.ajax({
     method: 'POST',
-    url: '/api/pokemon',
-    data: {
-      pokemon,
-    },
+    url: 'api/pokemon',
+    data: pokemon,
+  })
+);
+
+// fetch one pokemon from DB to render on show page
+export const fetchPokemon = pokemonId => (
+  $.ajax({
+    method: 'GET',
+    url: `api/pokemon/${pokemonId}`,
   })
 );

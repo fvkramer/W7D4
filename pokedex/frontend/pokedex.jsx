@@ -7,7 +7,7 @@ import Root from './components/root';
 
 // TEST
 import { fetchAllPokemon } from './util/api_util';
-import { receiveAllPokemon, requestAllPokemon } from './actions/pokemon_actions';
+import { receiveAllPokemon, requestAllPokemon, fetchPokemon } from './actions/pokemon_actions';
 import selectAllPokemon from './reducers/selectors';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   window.requestAllPokemon = requestAllPokemon;
   window.selectAllPokemon = selectAllPokemon;
+  window.fetchPokemon = fetchPokemon;
+  window.store = store;
   //
 
   console.log('We Loaded');
